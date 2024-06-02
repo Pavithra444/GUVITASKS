@@ -1,0 +1,75 @@
+HTTP1
+*****
+    * Http stands for "HYPER TEXT TRANSFER PROTOCOL"
+    * This protocal used to transfer data across the web.
+
+Text-Based Protocol: 
+                    The plain text is exchanged over client and the server.That is why it is called
+as text-based protocol.The messge contains two parts.The first one is header and the second one is body.The header 
+part is must,the body part is optional.The message may be a request message or response message.
+
+State-Less Protocol:
+                     Requests from client to server are not depends on another one.Each request are independent.
+                     Server does not contain old information about the client who is approching again.
+                     To maintain the state it requires additional mechanisms when multiple requests occur.
+
+Request-Response Model:
+                    In this model client used to send request to the server.The server respond to the client
+baesd on the message.This request have methods like
+
+                    *GET
+                    *POST
+                    *PUT
+                    *DELETE
+
+          Header Fields:
+          ^^^^^^^^^^^^^
+                    The header field includes meta data about the message.It may like content length,content type,
+                    cache control directives,cookies.          
+
+DISADVANTAGES:
+*************
+            Each request and response needs seperate TCP connection.
+            it slow downs the efficiancy.
+            When loading multiple resources, leades to higher connection rate.
+            Inefficiant "Header-Handling" when multiple connections occur.
+
+HTTP2
+*****
+        This HTTP2 is the second major version of HTTP1.It is also used to transfer data across the web.
+
+Binary Protocol:
+        Where HTTP1 is a text-based protocol but HTTP2 is a binary protocol.This gives more efficiency in parsing and transmission of data.
+
+Multiplexing:
+        This feature is the main key of http2.This allows multiple requests and responses over a single connection.
+        The main things is they are done in a parallel manner.
+
+        ADVANTAGE:
+        **********
+                This multiplexing feature eliminates the nedd for multiple TCP connections,it is efficient 
+                when multiple resources are using in a website.it decreses the latency and improves the performance.
+Header Compression:
+        This feature compress the header fields,before sending them in the network 
+
+Server Push:
+        This featues enables the server to send the data to client without receiving any request message from the
+        client.This become clients to easy access on the data.
+
+Stream Prioritization:         
+        In http2 it has the information about the priority.It helps in resource allocation.
+
+Backward Compatibility:
+        It is fully compatible with HTTP1.So there is no need to change the existing web infrastructure.
+
+
+DIFFERENCES:
+    HTTP1 
+    *****
+    Text Based.     No Multiplexing . No Header Compression.  No Server Push.
+    HTTP2 
+    ******
+    Binary Based.   Multiplexing    . Header Compression.     Server Push.
+
+
+    Because of the new features of HTTP2 becomes faster and advanced.

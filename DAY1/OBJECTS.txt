@@ -1,0 +1,100 @@
+OBJECTS
+*******
+      * In javascript everything treated as an object.
+      * Object is a collection of key-value pairs.
+      * Object is one of the advanced datatype.
+      * javascript automatically allocates the memory when objects are created.
+
+SYNTAX:
+*******
+        Syntax for creating an object
+
+        datatype objectname ={
+            key1:value1,
+            key2:value2,
+            .
+            .
+            .
+            keyn:value
+        };
+
+  datatype---- type of the object;
+  objectname---- name of the object;
+  key1...keyn-----name of the keys;(like variable names);
+  value1...valuen----initialing the values to the keys;
+
+  ':' - We have to use colon symbol to assign values to keys inside of object definition part.
+  ',' - We have to use comma symbol to seperate the key value pairs. 
+
+    There is one another method,using new keyword we can also create an object
+
+        var objectname=new Object();    
+
+        var---- datatype;
+        objectname---- name of the object;
+        new---- keyword;
+        Object()----it is a constructor;
+
+EXAMPLE:
+*******     
+      var data={
+        name:"Pavithra",
+        course:"FSD"
+      };
+
+ASSIGNMENT:
+***********
+            We can assign values to the keys in the creation phase itself,or else we can assign values to the keys
+            out of object definition part.
+
+          example: data.name="Pavithra Balakrishnan";
+RE-ASSIGNMENT:
+*************
+            We can also reassign the values for keys anywhere in the program.
+
+           example: data.course="DATA SCIENCE"; 
+
+ACCESSING:
+**********
+            We can access the keys in two ways.Those are
+                * Using '.' dot operator.
+                * Using square brackets[].
+
+        We can access the keys using dot operator.
+        example: data.name;
+        We can access the keys using [] square brackets.
+        example: data[name];
+
+Creating Keys:
+-------------
+            We can create keys in the creation phase itself,or else we can create the keys
+out of object definition part.
+Syntax for creating keys out of definition phase:
+
+           objectname.keyname="value";
+
+           objectname[keyname]="value";
+
+Example:
+       data.batch="FSD60WE-T";
+
+       data[batch]="FSD60WE-T";
+
+METHODS:
+*******
+        Objects are not only a key-value pairs,it can also contain functions,those are called 
+        object methods.
+
+DELETING THE OBJECT:
+*******************
+        We can delete the object using 'delete' keyword.Once the object is deleted the memory frees the space.
+Syntax:
+        delete objectname;
+
+        delete----keyword;
+        objectname---- name of the object;
+example:
+
+        delete data;
+
+
