@@ -1,0 +1,222 @@
+//Task1a))
+
+let Arr=[1,2,3,4,5];
+let result=(function(parmArr){
+    let resultArr=[];
+for(var i=0;i<parmArr.length;i++)
+    {
+        if(Number(parmArr[i])%2!=0)
+            {
+                resultArr.push(parmArr[i]);
+            }
+    }
+return resultArr;
+})(Arr);
+console.log(result);
+
+OUTPUT:
+[1, 3, 5]
+*****************************************************************************************
+//Task1b))
+
+let strArr=['apple','ball','cat'];
+(function(parmArr){
+let tempStr="";
+let resultStrArr=[];
+let resultStr="";
+for(i=0;i<strArr.length;i++)
+    {
+        tempStr=strArr[i];
+        for(j=0;j<tempStr.length;j++)
+            {
+                if(j==0)
+                    {
+                        resultStr=resultStr+ tempStr.charAt(j).toUpperCase();
+                    }
+                else{
+                    resultStr=resultStr+ tempStr.charAt(j);
+                }    
+            }
+       
+            resultStrArr.push(resultStr);
+        resultStr="";
+    }
+    console.log(resultStrArr);
+})(strArr);
+
+OUTPUT:
+['Apple', 'Ball', 'Cat']
+*****************************************************************************************
+//Task1c))
+
+let Arr=[1,2,3,4,5,6];
+(function(parmArr){
+let sum=0;
+for(i=0;i<Arr.length;i++)
+    {  
+     sum+=Number(Arr[i]) ;
+    }
+    console.log(sum);
+})(Arr);
+
+OUTPUT:
+21
+*****************************************************************************************
+
+//Task1d))
+
+let Arr=[8,7,5,9,11,12,3];
+(function(parmArr){
+    let n;
+    let result=0;
+    let caseValue=0;
+    let resultArr=[];
+
+    for(i=0;i<parmArr.length;i++)
+    {
+        n =Number(Arr[i]);
+        result=0;
+        caseValue=0;
+       
+                   if(n<=5)
+                    {
+                        caseValue=1;
+                    }
+                    
+                    if((n>5)&&(n<=7))
+                    {
+                        caseValue=2;
+                    }
+                    
+                    if(n>7)
+                    {
+                        caseValue=3;
+                    }
+                    
+                    switch (caseValue){
+                    case 1:
+                    
+                        if((n%2!=0)&&(n%3!=0))
+                        {
+                        result=n;
+                            }
+                            break;
+                    case 2:
+                        if((n%2!=0)&&(n%3!=0)&&(n%5!=0))
+                        {
+                        result=n;
+                            }
+                            break;
+                    case 3:
+                        if((n%2!=0)&&(n%3!=0)&&(n%5!=0)&&(n%7!=0))
+                        {
+                        result=n;
+                            }
+                            break;
+                        
+                    }           
+            
+            if(n==3)
+                {
+                 resultArr.push(n);
+                }
+            if(result>0)
+            {
+            resultArr.push(result);
+            }
+}
+    
+    console.log(resultArr);
+})(Arr);
+
+OUTPUT:
+[7, 5, 11, 3]
+*****************************************************************************************
+//Task1e))
+
+let Arr=["madam","cat","malayalam"];
+(function(parmArr){
+
+    let str="";
+    let revStr="";
+    let resultArr=[];
+    for(i=0;i<parmArr.length;i++)
+        {
+            str=parmArr[i];
+            for(j=str.length-1;j>=0;j--)
+                {
+                    revStr=revStr+str.charAt(j);
+                }
+                if(str===revStr)
+                    {
+                        resultArr.push(revStr);
+                    }
+                    revStr="";
+        }
+console.log(resultArr);
+})(Arr);
+
+OUTPUT:
+['madam', 'malayalam']
+
+*****************************************************************************************
+//Task1f))
+
+let Arr1=[5,4,3,2,1];
+let Arr2=[11,10,9,8,7,6];
+(function(parmArr1,parmArr2){
+let median=0;
+let tempArr=parmArr1.concat(parmArr2);
+tempArr.sort(function(a,b){return a-b});
+if(tempArr.length%2==0)
+    {
+        mindex=tempArr.length/2;
+        median=Math.floor((Number(tempArr[mindex])+Number(tempArr[mindex-1]))/2);
+        console.log(median);
+    }
+    else{
+        mindex=Math.floor(tempArr.length/2);
+        median=Number(tempArr[mindex]);
+        console.log(median);
+    }
+})(Arr1,Arr2);
+
+OUTPUT:
+6
+
+*****************************************************************************************
+
+//Task1g))
+
+let Arr=[1,2,3,1,1,8,3];
+(function(parmArr){
+    parmArr = parmArr.filter( function( item, index, inputArray ) {
+        return parmArr.indexOf(item) == index;
+       
+});
+console.log(parmArr); 
+})(Arr);
+
+OUTPUT:
+[1, 2, 3, 8]
+
+*****************************************************************************************
+
+Task1h))
+
+let Arr=[1,2,3,4,5];
+let k=3;
+let tempArr=[1,2,3,4,5];
+for(i=1;i<=k;i++)
+{
+    tempArr=(function(parmArr){
+        parmArr.unshift( parmArr.pop());
+        return parmArr;
+    })(Arr);
+}
+console.log(tempArr);
+
+OUTPUT:
+[3, 4, 5, 1, 2]
+
+*****************************************************************************************
